@@ -1,0 +1,219 @@
+html {
+
+    
+    
+
+    
+}
+
+body {
+
+    @include main_font_regular;
+    font-size: 1.6rem;
+    color: $bodyColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+
+    //mediaquery
+    @include big_device {
+        padding: 6.4rem 8rem 4rem;
+        background: url('../../images/bg-desktop.svg') no-repeat center center;
+        background-size: cover;
+    }
+
+    @include small_device {
+        padding: 4rem;
+        background: url('../../images/bg-mobile.svg') no-repeat center center;
+        background-size: cover;
+    }
+}
+
+.huddle {
+
+    width: 100%;
+    max-width: 127.5rem;
+
+
+    &__header {
+
+        &__logo {
+
+            @include big_device {
+                width: 20rem;
+            }
+
+            @include small_device {
+                width: 12rem;
+            }
+
+            img {
+                @include img_responsive;
+            }
+
+        }
+    }
+
+    &__main {
+
+        @include big_device {
+            display: flex;
+            margin-top: 10.4rem;
+        }
+
+        @include small_device {
+            margin-top: 7rem;
+        }
+
+        &__left {
+
+            @include big_device {
+                flex-basis: 69.6rem;
+                flex-grow: 0;
+                flex-shrink: 0;
+                margin-right: 5.9rem;
+            }
+
+            img {
+                @include img_responsive;
+            }
+        }
+
+        &__right {
+
+            @include big_device {
+                margin-top: 3.2rem;
+            }
+
+            @include small_device {
+                margin-top: 6rem;
+                text-align: center
+            }
+
+            &__title {
+                @include main_font_semibold;
+
+                @include big_device {
+                    font-size: 4rem;
+                    line-height: 6rem;
+                }
+
+                @include small_device {
+                    font-size: 2.4rem;
+                    line-height: 3.6rem;
+                }
+
+            }
+
+            &__desc {
+
+                @include secondary_font_regular;
+
+
+                @include big_device {
+                    margin-top: 2.4rem;
+                    font-size: 1.8rem;
+                    line-height: 2.7rem;
+                }
+
+                @include small_device {
+                    margin-top: 1.6rem;
+                    font-size: 1.6rem;
+                    line-height: 2.4rem;
+                }
+
+            }
+
+            &__cta {
+
+                background-color: #fff;
+                margin-top: 2.4rem;
+                display: inline-block;
+                width: 20rem;
+                border-radius: 2.8rem;
+                text-align: center;
+                color: #684BB1;
+                transition: all .3s;
+
+                @include big_device {
+                    font-size: 1.8rem;
+                    height: 5.6rem;
+                    line-height: 5.6rem;
+                }
+    
+                @include small_device {
+                    font-size: 1.2rem;
+                    height: 4rem;
+                    line-height: 4rem;
+                }
+
+                &:hover {
+                    color: white;
+                    background-color: #E880E8;
+                }
+            }
+
+        }
+    }
+
+    &__footer {
+
+        display: flex;
+
+        @include big_device {
+            justify-content: flex-end;
+        }
+
+        @include small_device {
+           justify-content: center;
+           margin-top: 6.4rem;
+        }
+
+        &__icons {
+
+            
+            display: flex;
+
+            &__icon {
+
+                border: 1px solid white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all .3s;
+
+                @include big_device {
+                    width: 4rem;
+                    height: 4rem;
+                }
+    
+                @include small_device {
+                    width: 2.8rem;
+                    height: 2.8rem;
+                }
+
+                &:not(:first-child) {
+                   
+                    @include big_device {
+                        margin-left: 1.6rem;
+                    }
+        
+                    @include small_device {
+                        margin-left: 1.05rem;
+                    }
+                }
+
+                &:hover {
+                    color: #FF52C1;
+                    border-color: #FF52C1;
+                }
+
+            }
+        }
+    }
+
+}
